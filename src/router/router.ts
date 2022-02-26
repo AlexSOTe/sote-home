@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     component: () => import('@/views/home/home.vue'),
     meta: {
-      title: '机型选择',
+      title: '月夜柳箫',
     },
   },
   {

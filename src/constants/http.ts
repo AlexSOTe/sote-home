@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Toast } from 'vant';
-import { entryUrlQuery } from '../utils/tools';
+import { entryUrlQuery } from 'sote-tools';
 const token = entryUrlQuery.token;
 // 添加请求拦截器
 axios.interceptors.request.use(

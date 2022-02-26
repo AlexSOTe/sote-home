@@ -5,7 +5,6 @@ import { store } from './store';
 import 'vant/lib/index.css';
 import './assets/style/global.scss';
 import './assets/style/vant.cover.scss';
-import { CheckHasToken } from './utils/tools';
 
 const app = createApp(App);
 app.use(router);
