@@ -4,8 +4,17 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Menu: typeof import('./src/components/public/Menu.vue')['default']
     NoToken: typeof import('./src/components/shared/NoToken.vue')['default']
+    VanButton: typeof import('vant/es')['Button']
     VanEmpty: typeof import('vant/es')['Empty']
+    VanIcon: typeof import('vant/es')['Icon']
+    VanNavBar: typeof import('vant/es')['NavBar']
+    VanOverlay: typeof import('vant/es')['Overlay']
+    VanSidebar: typeof import('vant/es')['Sidebar']
+    VanSidebarItem: typeof import('vant/es')['SidebarItem']
+    VanTabbar: typeof import('vant/es')['Tabbar']
+    VanTabbarItem: typeof import('vant/es')['TabbarItem']
   }
 }
 
