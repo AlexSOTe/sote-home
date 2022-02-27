@@ -11,9 +11,5 @@
     display: flex;
     justify-content: flex-end;
     background-color: white;
-
-    d .sidebar {
-      width: 60px;
-    }
   }
 </style>
