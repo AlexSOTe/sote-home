@@ -5,5 +5,6 @@ export const CSS: Array<IQuestion> = [
     desc: '',
     reason: '',
     solution: '',
+    isResolve: true,
   },
 ];

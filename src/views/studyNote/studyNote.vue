@@ -63,6 +63,13 @@
     .list {
       .collapseItemTitle {
       }
+
+      &:deep(.van-collapse-item__title) {
+        width: auto;
+        margin: 4px;
+        border-radius: 10px;
+        background-color: #c0ffd3;
+      }
     }
   }
 </style>

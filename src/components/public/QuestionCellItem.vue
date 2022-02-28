@@ -3,11 +3,11 @@
     <div class="content">
       <div class="body">
         <div class="title">{{props.title}}</div>
-        <div class="text">{{props.text}}</div>
+        <div class="func">
+          <van-tag color="#44dd44" plain @click="onTextCopy(props.text)">复制</van-tag>
+        </div>
       </div>
-      <div class="func">
-        <van-tag color="#44dd44" plain @click="onTextCopy(props.text)">复制</van-tag>
-      </div>
+      <div class="text">{{props.text}}</div>
     </div>
   </van-cell>
 </template>
@@ -38,24 +38,27 @@
   .QuestionCellItem {
 
     .content {
-      display: flex;
 
       .body {
+        display: flex;
+
         .title {
+          flex: 1;
           margin: 0 0 0px;
           font-size: 14px;
           color: black;
         }
 
-        .text {
-          font-size: 12px;
-          color: #969799;
-          line-height: 16px;
+        .func {
+          flex: none;
         }
       }
 
-      .func {
-        flex: none;
+      .text {
+        font-size: 12px;
+        color: #969799;
+        line-height: 16px;
+        white-space: pre-wrap;
       }
     }
   }

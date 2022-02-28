@@ -4,6 +4,7 @@ declare interface IQuestion {
   desc: string;
   reason: string;
   solution: string;
+  isResolve: boolean;
 }
 declare interface IVantTabItemProps {
   disabled: boolean;
