@@ -56,6 +56,11 @@
   function onClickTab(tab: IVantTabItemProps) {
     list.value = questions[tab.title as EStudyTabs];
   }
+  onMounted(() => {
+    //默认展示第一页数据
+    const studyTab = studyTabs[0];
+    list.value = questions[studyTab.title as EStudyTabs];
+  });
 </script>
 
 <style scoped lang="scss">
