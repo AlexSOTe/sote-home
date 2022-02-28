@@ -3,6 +3,22 @@ import { BASE } from "../constants/config";
 import { store } from "../store";
 
 
+const pageRoutes: Array<RouteRecordRaw> = [
+  {
+    path: '/studyNote',
+    component: () => import('@/views/studyNote/studyNote.vue'),
+    meta: {
+      title: '学习笔记',
+    },
+  },
+  {
+    path: '/paperCuts',
+    component: () => import('@/views/paperCuts/paperCuts.vue'),
+    meta: {
+      title: '窗花',
+    },
+  },
+];
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -12,9 +28,10 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: '/home',
+    path: '/Home',
     redirect: '/',
   },
+  ...pageRoutes,
   // 将匹配所有内容并将其放在 `$route.params.pathMatch` 下
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@/views/notFound/NotFound.vue') },
 ];

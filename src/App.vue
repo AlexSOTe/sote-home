@@ -2,34 +2,33 @@
 <template>
   <div class="App">
     <div class="navBar">
-      <van-nav-bar :title="store.getters.getDocumentTitle||'童话村香辣藤椒劲麻裹蛋大鸡排'" left-arrow>
-        <template #left>
-          <div class="menuBtn">
-            <img class="avatar" src="/static/img/bloghead.jpg" />
-          </div>
-        </template>
-        <template #right>
-          <div class="menuBtn" @click="blockShow.menu = true">
-            <van-icon name="apps-o" />
-          </div>
-        </template>
-      </van-nav-bar>
+      <van-sticky>
+        <van-nav-bar :title="store.getters.getDocumentTitle||'童话村香辣藤椒劲麻裹蛋大鸡排'" left-arrow>
+          <template #left>
+          </template>
+          <template #right>
+            <div class="menuBtn" @click="onAvatarClick">
+              <img class="avatar" src="/static/img/bloghead.jpg" />
+            </div>
+          </template>
+        </van-nav-bar>
+      </van-sticky>
     </div>
     <div class="pages">
       <router-view></router-view>
     </div>
+    <!--底部tab-->
     <!--<div class="bottomBar">
       <van-tabbar v-model="tabbarIndex">
-        <van-tabbar-item icon="home-o">标签</van-tabbar-item>-->
-    <!--<van-tabbar-item icon="search" dot>标签</van-tabbar-item>
-    <van-tabbar-item icon="friends-o" badge="5">标签</van-tabbar-item>-->
-    <!--<van-tabbar-item icon="setting-o" badge="20">标签</van-tabbar-item>
+        <van-tabbar-item icon="home-o">标签</van-tabbar-item>
+        <van-tabbar-item icon="search" dot>标签</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" badge="5">标签</van-tabbar-item>
+        <van-tabbar-item icon="setting-o" badge="20">标签</van-tabbar-item>
       </van-tabbar>
     </div>-->
 
-    <van-overlay :show="blockShow.menu" @click="blockShow.menu = false">
-      <Menu />
-    </van-overlay>
+    <van-action-sheet v-model:show="blockShow.menu" :actions="actions" @select="onSelect" />
+    <Menu @click="blockShow.menu = true" />
   </div>
 </template>
 
@@ -40,10 +39,31 @@
   import Menu from './components/public/Menu.vue';
 
   const route = useRoute();
+  const router = useRouter();
+
+  const tabbarIndex = ref(0);
   const blockShow = reactive({
     menu: false,
   });
-  const tabbarIndex = ref(0);
+  const actions = ref([
+    { name: '首页', path: '/home' },
+    { name: '学习笔记', path: '/studyNote' },
+    { name: '窗花', path: '/paperCuts' },
+  ]);
+  function onSelect(item: any) {
+    console.log(item);
+    blockShow.menu = false;
+    router.push({
+      path: item.path,
+      query: {}
+    });
+  }
+  function onAvatarClick() {
+    router.push({
+      path: '/home',
+      query: {}
+    });
+  }
 
 </script>
 
@@ -56,6 +76,8 @@
   }
 
   .navBar {
+    flex: none;
+
     .menuBtn {
       font-size: 24px;
 
@@ -68,10 +90,10 @@
   }
 
   .pages {
-    flex: 1;
   }
 
   .bottomBar {
+    flex: none;
     height: 50px;
   }
 </style>

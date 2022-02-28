@@ -5,11 +5,24 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Menu: typeof import('./src/components/public/Menu.vue')['default']
+    QuestionCellItem: typeof import('./src/components/public/QuestionCellItem.vue')['default']
+    QuestionItem: typeof import('./src/components/public/QuestionItem.vue')['default']
+    VanActionSheet: typeof import('vant/es')['ActionSheet']
+    VanCell: typeof import('vant/es')['Cell']
+    VanCellGroup: typeof import('vant/es')['CellGroup']
+    VanCollapse: typeof import('vant/es')['Collapse']
+    VanCollapseItem: typeof import('vant/es')['CollapseItem']
+    VanEmpty: typeof import('vant/es')['Empty']
     VanIcon: typeof import('vant/es')['Icon']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanOverlay: typeof import('vant/es')['Overlay']
-    VanSidebar: typeof import('vant/es')['Sidebar']
-    VanSidebarItem: typeof import('vant/es')['SidebarItem']
+    VanSearch: typeof import('vant/es')['Search']
+    VanSticky: typeof import('vant/es')['Sticky']
+    VanTab: typeof import('vant/es')['Tab']
+    VanTabbar: typeof import('vant/es')['Tabbar']
+    VanTabbarItem: typeof import('vant/es')['TabbarItem']
+    VanTabs: typeof import('vant/es')['Tabs']
+    VanTag: typeof import('vant/es')['Tag']
   }
 }
 

@@ -5,7 +5,11 @@ import { store } from './store';
 import 'vant/lib/index.css';
 import './assets/style/global.scss';
 import './assets/style/vant.cover.scss';
+import { Locale } from 'vant';
+import enUS from 'vant/es/locale/lang/en-US';
 
+
+Locale.use('en-US', enUS);
 const app = createApp(App);
 app.use(router);
 app.use(store);
