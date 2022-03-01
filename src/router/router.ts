@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
+import { Vibrate } from "../constants/tools";
 import { store } from "../store";
 
 
@@ -56,6 +57,7 @@ router.beforeEach((to: any, from: any, next: any) => {
   if (false/* 需要登陆状态（to.meta.requireAuth） && 未登录 */) {
     // 跳登录
   } else {
+    Vibrate([50, 50, 50]);
     next();
   }
 });
