@@ -54,7 +54,10 @@
   const list = ref<Array<IQuestion>>([]);
 
   function onClickTab(tab: IVantTabItemProps) {
+    //展示对应数组
     list.value = questions[tab.title as EStudyTabs];
+    //全部合起来
+    activeNames.value = [];
   }
   onMounted(() => {
     //默认展示第一页数据

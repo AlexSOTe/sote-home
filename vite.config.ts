@@ -21,7 +21,7 @@ const mode = GetViteMode();
 
 let i = 0;
 
-const basePath = '/';
+const basePath = '/sote-home';
 const isProd = mode === 'production';
 console.log('isProd:', isProd, '\r\nmode:', mode);
 
