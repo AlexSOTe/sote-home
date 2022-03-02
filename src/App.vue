@@ -47,7 +47,7 @@
   });
   const actions = ref([
     { name: '首页', path: '/home' },
-    { name: '学习笔记', path: '/studyNote' },
+    { name: '工作遇到的技术问题', path: '/studyNote' },
     { name: '窗花', path: '/paperCuts' },
   ]);
   function onSelect(item: any) {
