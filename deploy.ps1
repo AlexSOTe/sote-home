@@ -16,7 +16,7 @@ echo "【删除文件夹内文件$($target_dir)】"
 Remove-item -recurse "$target_dir/*" #默认掠过隐藏文件
 
 echo "【复制到$($target_dir)文件夹】"
-Copy-Item -Path "$($sote_home_dir)/dist/*" -Recurse -Destination "$($target_dir)/" -Force
+Copy-Item -Path "$($sote_home_dir)/dist/sote-home/*" -Recurse -Destination "$($target_dir)/" -Force
 
 echo "【进入 AlexSOTe.github.io 文件夹】"
 cd $target_dir

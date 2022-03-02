@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, NavigationGuardNext, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory, NavigationGuardNext, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
 import { Vibrate } from "../constants/tools";
 import { store } from "../store";
@@ -37,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@/views/notFound/NotFound.vue') },
 ];
 const router = createRouter({
-  history: createWebHashHistory(BASE),
+  history: createWebHistory(BASE),
   routes,
 });
 
