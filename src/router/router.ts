@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, NavigationGuardNext, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
 import { Vibrate } from "../constants/tools";
 import { store } from "../store";
@@ -52,14 +52,16 @@ function SetDocumentTitle(title: string) {
   }
 }
 
-router.beforeEach((to: any, from: any, next: any) => {
+router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
   SetDocumentTitle(to.meta.title as string);
-  if (false/* 需要登陆状态（to.meta.requireAuth） && 未登录 */) {
-    // 跳登录
-  } else {
-    Vibrate([50, 50, 50]);
-    next();
-  }
+  //if (false/* 需要登陆状态（to.meta.requireAuth） && 未登录 */) {
+  //  // 跳登录
+  //} else {
+  //  Vibrate([50, 50, 50]);
+  //  next();
+  //}
+  Vibrate([50, 50, 50]);
+  next();
 });
 
 

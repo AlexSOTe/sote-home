@@ -59,7 +59,7 @@
   onMounted(() => {
     //默认展示第一页数据
     const studyTab = studyTabs[0];
-    list.value = questions[studyTab.title as EStudyTabs];
+    list.value = questions[studyTab.title];
   });
 </script>
 

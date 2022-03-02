@@ -55,7 +55,7 @@ export default defineConfig({
     port: 4200,
   },
   build: {
-    outDir: 'dist',
+    outDir: 'dist/sote-home',
     terserOptions: {
       compress: {
         //生产环境时移除console
