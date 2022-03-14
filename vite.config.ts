@@ -19,7 +19,6 @@ function GetViteMode() {
 
 const mode = GetViteMode();
 
-let i = 0;
 
 const basePath = '/sote-home/';
 const isProd = mode === 'production';
@@ -66,10 +65,8 @@ export default defineConfig({
     chunkSizeWarningLimit: 1024, //单个文件限制大小
     rollupOptions: {
       output: {
-        manualChunks(path) {
-          const nameStr = `${i++}_${new Date().getTime().toString()}`;
-          return nameStr;
-        }
+        //manualChunks(path: string) {
+        //}
       }
     }
   },

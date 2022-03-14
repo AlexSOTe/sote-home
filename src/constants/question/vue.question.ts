@@ -72,4 +72,12 @@ export const VUE: Array<IQuestion> = [
 }`,
     isResolve: true,
   },
+  {
+    id: '7',
+    title: `开启了keepAlive后页面数据没更新`,
+    desc: `开启了keepAlive后页面数据没更新`,
+    reason: `页面组件被缓存，不会重复执行onMounted方法`,
+    solution: `需要通过onActivated和onDeactivated两个钩子来重新更新页面数据`,
+    isResolve: true,
+  },
 ];
