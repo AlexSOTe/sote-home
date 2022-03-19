@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "sote-tools": "^1.0.7",
+    "interactjs": "^1.10.11",
+    "sote-tools": "^1.0.8",
     "vant": "^3.3.1",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@interactjs/types": "^1.10.11",
     "@types/node": "^17.0.21",
     "@vitejs/plugin-vue": "^1.9.3",
     "sass": "^1.43.5",
