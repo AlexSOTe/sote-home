@@ -4,15 +4,12 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BGM: typeof import('./src/components/public/BGM.vue')['default']
     Menu: typeof import('./src/components/public/Menu.vue')['default']
     QuestionCellItem: typeof import('./src/components/public/QuestionCellItem.vue')['default']
-    VanActionSheet: typeof import('vant/es')['ActionSheet']
     VanButton: typeof import('vant/es')['Button']
     VanCell: typeof import('vant/es')['Cell']
     VanCollapse: typeof import('vant/es')['Collapse']
     VanCollapseItem: typeof import('vant/es')['CollapseItem']
-    VanDialog: typeof import('vant/es')['Dialog']
     VanEmpty: typeof import('vant/es')['Empty']
     VanIcon: typeof import('vant/es')['Icon']
     VanNavBar: typeof import('vant/es')['NavBar']
@@ -22,7 +19,6 @@ declare module 'vue' {
     VanTab: typeof import('vant/es')['Tab']
     VanTabs: typeof import('vant/es')['Tabs']
     VanTag: typeof import('vant/es')['Tag']
-    Voice: typeof import('./src/components/public/Voice.vue')['default']
   }
 }
 

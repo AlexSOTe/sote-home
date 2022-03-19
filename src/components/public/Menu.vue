@@ -1,5 +1,5 @@
 <template>
-  <div class="Menu">
+  <div ref="Menu" class="Menu">
     <van-popover v-model:show="showPopover"
                  placement="top-end"
                  theme="dark"
@@ -14,11 +14,13 @@
   </div>
 </template>
 <script setup lang="ts">
-  import { ref } from "vue";
+  import { onMounted, ref } from "vue";
   import { useRoute, useRouter } from "vue-router";
 
   const route = useRoute();
   const router = useRouter();
+
+  const Menu = ref<HTMLDivElement | null>(null);
 
   const showPopover = ref(false);
   interface IMenuItem {
@@ -39,6 +41,11 @@
       query: {}
     });
   }
+
+  onMounted(() => {
+    // @ts-ignore
+    new Inertia(Menu.value!);
+  });
 </script>
 <style scoped lang="scss">
   .Menu {
