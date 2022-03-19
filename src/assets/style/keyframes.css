@@ -1,22 +1,22 @@
 @keyframes TurningBorderHalo {
   0% {
-    outline: 1px solid lightgreen;
+    border: 1px solid lightgreen;
   }
 
   70% {
-    outline: 1px solid lime;
+    border: 1px solid lime;
   }
 
   80% {
-    outline: 1px solid green;
+    border: 1px solid green;
   }
 
   90% {
-    outline: 1px solid lime;
+    border: 1px solid lime;
   }
 
   100% {
-    outline: 1px solid lightgreen;
+    border: 1px solid lightgreen;
   }
 }
 

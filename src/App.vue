@@ -70,7 +70,7 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        outline: 1px solid lime;
+        border: 1px solid lime;
         animation: TurningBorderHalo 2s infinite;
       }
     }
