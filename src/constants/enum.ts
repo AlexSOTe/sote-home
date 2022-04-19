@@ -5,4 +5,5 @@ export enum EStudyTabs {
   VUE = 'VUE',
   ElementUI = 'ElementUI',
   Ubuntu = 'Ubuntu',
+  Windows = 'Windows',
 }

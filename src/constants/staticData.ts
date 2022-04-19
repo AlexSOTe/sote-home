@@ -10,4 +10,5 @@ export const studyTabs: Array<StudyTabsItem> = [
   { id: '3', title: EStudyTabs.VUE },
   { id: '4', title: EStudyTabs.ElementUI },
   { id: '5', title: EStudyTabs.Ubuntu },
+  { id: '6', title: EStudyTabs.Windows },
 ];
