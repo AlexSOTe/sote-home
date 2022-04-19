@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, createWebHistory, NavigationGuardNext, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
-import { Vibrate } from "../constants/tools";
+import { RouterChangeVibrate } from "../funny/vibrate";
 import { store } from "../store";
 
 
@@ -60,7 +60,7 @@ router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, n
   //  Vibrate([50, 50, 50]);
   //  next();
   //}
-  Vibrate([50, 50, 50]);
+  RouterChangeVibrate();
   next();
 });
 

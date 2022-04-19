@@ -27,8 +27,7 @@
       </van-tabbar>
     </div>-->
 
-    <van-action-sheet v-model:show="blockShow.menu" :actions="actions" @select="onSelect" />
-    <Menu @click="blockShow.menu = true" />
+    <Menu />
   </div>
 </template>
 
@@ -37,34 +36,20 @@
   import { onMounted, reactive, ref, watch } from 'vue';
   import { store } from './store/index';
   import Menu from './components/public/Menu.vue';
-
+  import { Dialog, Notify, Toast } from "vant";
   const route = useRoute();
   const router = useRouter();
 
   const tabbarIndex = ref(0);
-  const blockShow = reactive({
-    menu: false,
-  });
-  const actions = ref([
-    { name: '首页', path: '/home' },
-    { name: '工作遇到的技术问题', path: '/studyNote' },
-    { name: '窗花', path: '/paperCuts' },
-  ]);
-  function onSelect(item: any) {
-    console.log(item);
-    blockShow.menu = false;
-    router.push({
-      path: item.path,
-      query: {}
-    });
-  }
+
   function onAvatarClick() {
     router.push({
       path: '/home',
       query: {}
     });
   }
-
+  onMounted(() => {
+  });
 </script>
 
 <style scoped lang="scss">
@@ -85,6 +70,8 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
+        border: 1px solid lime;
+        animation: TurningBorderHalo 2s infinite;
       }
     }
   }

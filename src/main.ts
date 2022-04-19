@@ -4,6 +4,7 @@ import router from './router/router';
 import { store } from './store';
 import 'vant/lib/index.css';
 import './assets/style/global.scss';
+import './assets/style/keyframes.css';
 import './assets/style/vant.cover.scss';
 import { Locale } from 'vant';
 import enUS from 'vant/es/locale/lang/en-US';
