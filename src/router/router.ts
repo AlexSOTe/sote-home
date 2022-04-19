@@ -56,12 +56,6 @@ function SetDocumentTitle(title: string) {
 router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
   console.log('router.beforeEach');
   SetDocumentTitle(to.meta.title as string);
-  //if (false/* 需要登陆状态（to.meta.requireAuth） && 未登录 */) {
-  //  // 跳登录
-  //} else {
-  //  Vibrate([50, 50, 50]);
-  //  next();
-  //}
   RouterChangeVibrate();
   //跳转也面前显示loading
   Toast.loading({ duration: 0 });
