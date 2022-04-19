@@ -63,11 +63,13 @@ router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, n
   //  next();
   //}
   RouterChangeVibrate();
-  next();
+  //跳转也面前显示loading
   Toast.loading({ duration: 0 });
+  next();
 });
 router.afterEach((to: RouteLocationNormalized, from: RouteLocationNormalized, failure?: NavigationFailure | void) => {
   console.log('router.afterEach');
+  //页面加载完，移除loading
   Toast.clear();
 });
 
