@@ -1,4 +1,5 @@
-import { createRouter, createWebHashHistory, createWebHistory, NavigationGuardNext, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
+import { Toast } from "vant";
+import { createRouter, createWebHashHistory, createWebHistory, NavigationFailure, NavigationGuardNext, NavigationHookAfter, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
 import { RouterChangeVibrate } from "../funny/vibrate";
 import { store } from "../store";
@@ -53,6 +54,7 @@ function SetDocumentTitle(title: string) {
 }
 
 router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
+  console.log('router.beforeEach');
   SetDocumentTitle(to.meta.title as string);
   //if (false/* 需要登陆状态（to.meta.requireAuth） && 未登录 */) {
   //  // 跳登录
@@ -62,8 +64,12 @@ router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, n
   //}
   RouterChangeVibrate();
   next();
+  Toast.loading({ duration: 0 });
 });
-
+router.afterEach((to: RouteLocationNormalized, from: RouteLocationNormalized, failure?: NavigationFailure | void) => {
+  console.log('router.afterEach');
+  Toast.clear();
+});
 
 
 export default router;
