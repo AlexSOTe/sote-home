@@ -9,7 +9,7 @@ const pageRoutes: Array<RouteRecordRaw> = [
     path: '/studyNote',
     component: () => import('@/views/studyNote/studyNote.vue'),
     meta: {
-      title: '工作遇到的技术问题',
+      title: '技术点梳理',
     },
   },
   {

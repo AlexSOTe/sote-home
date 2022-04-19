@@ -11,7 +11,8 @@
     <van-search v-model="keyword"
                 shape="round"
                 background="#ffffff"
-                placeholder="请输入搜索关键词" />
+                placeholder="请输入搜索关键词"
+                @search="onSearch"/>
     <div class="list">
       <van-collapse v-if="list.length>0"
                     v-model="activeNames">
@@ -53,6 +54,9 @@
   const activeNames = ref([]);
   const list = ref<Array<IQuestion>>([]);
 
+  function onSearch() {
+    Toast('哦豁！这个功能还没做')
+  }
   function onClickTab(tab: IVantTabItemProps) {
     //展示对应数组
     list.value = questions[tab.title as EStudyTabs];
