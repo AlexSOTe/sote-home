@@ -44,7 +44,7 @@
 
   onMounted(() => {
     // @ts-ignore
-    new Inertia(Menu.value!);
+    //new Inertia(Menu.value!);
   });
 </script>
 <style scoped lang="scss">

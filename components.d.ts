@@ -6,6 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Menu: typeof import('./src/components/public/Menu.vue')['default']
     QuestionCellItem: typeof import('./src/components/public/QuestionCellItem.vue')['default']
+    VanActionSheet: typeof import('vant/es')['ActionSheet']
     VanButton: typeof import('vant/es')['Button']
     VanCell: typeof import('vant/es')['Cell']
     VanCollapse: typeof import('vant/es')['Collapse']
