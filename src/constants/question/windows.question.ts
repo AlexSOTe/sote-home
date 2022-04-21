@@ -17,5 +17,15 @@ export const Windows: Array<IQuestion> = [
 3、重启电脑
 保存、重启电脑`,
     isResolve: true,
+  },{
+    id: '0',
+    title: '删除远程桌面客户端的历史记录',
+    desc: '移除失效、无用的记录',
+    reason: '碍眼',
+    solution: `
+1、win+r 打开运行输入regedit
+2、定位到【HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default】
+3、右边除了【MRU0】之外，删除其他不想要的项就好`,
+    isResolve: true,
   },
 ];
