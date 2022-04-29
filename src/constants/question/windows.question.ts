@@ -17,8 +17,9 @@ export const Windows: Array<IQuestion> = [
 3、重启电脑
 保存、重启电脑`,
     isResolve: true,
-  },{
-    id: '0',
+  },
+  {
+    id: '1',
     title: '删除远程桌面客户端的历史记录',
     desc: '移除失效、无用的记录',
     reason: '碍眼',
@@ -26,6 +27,17 @@ export const Windows: Array<IQuestion> = [
 1、win+r 打开运行输入regedit
 2、定位到【HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default】
 3、右边除了【MRU0】之外，删除其他不想要的项就好`,
+    isResolve: true,
+  },
+  {
+    id: '2',
+    title: 'Windows vnc server安装后打不开',
+    desc: '安装后双击vncserver没反应',
+    reason: '未知',
+    solution: `
+1、cd到安装目录
+2、当前目录执行【.\vncserver.exe -start -showstatus】
+3、登录账号、设置密码，就好了`,
     isResolve: true,
   },
 ];
