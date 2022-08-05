@@ -28,6 +28,7 @@
     </div>-->
 
     <Menu />
+    <div class="beian"><a href="https://beian.miit.gov.cn/">京ICP备2022007190号-1</a></div>
   </div>
 </template>
 
@@ -82,5 +83,12 @@
   .bottomBar {
     flex: none;
     height: 50px;
+  }
+
+  .beian {
+    margin-top: 200px;
+    padding: 30px;
+    text-align: center;
+    color: #aaa;
   }
 </style>
