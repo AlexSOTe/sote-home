@@ -5,8 +5,6 @@ import path = require('path');
 //按需加载
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
-//给html.index添加模板变量解析
-import { minifyHtml, injectHtml } from 'vite-plugin-html';
 
 /**
  * 获取vite打包环境模式
@@ -35,13 +33,6 @@ export default defineConfig({
       resolvers: [
         VantResolver(),
       ],
-    }),
-    minifyHtml(),
-    injectHtml({
-      data: {
-        title: '月夜柳箫',
-        isProd: isProd,
-      }
     }),
   ],
   resolve: {
