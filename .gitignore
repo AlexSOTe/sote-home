@@ -7,3 +7,4 @@ dist-ssr
 .vs
 .idea
 debug.log
+components.d.ts
