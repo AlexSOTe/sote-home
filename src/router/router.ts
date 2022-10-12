@@ -2,10 +2,10 @@ import { Toast } from "vant";
 import { createRouter, createWebHashHistory, createWebHistory, NavigationFailure, NavigationGuardNext, NavigationHookAfter, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
 import { RouterChangeVibrate } from "../funny/vibrate";
-import { store } from "../store";
+import { useMainStore } from "../store/main.store";
 
 
-const pageRoutes: Array<RouteRecordRaw> = [
+const pageRoutes: RouteRecordRaw[] = [
   {
     path: '/studyNote',
     component: () => import('@/views/studyNote/studyNote.vue'),
@@ -21,7 +21,7 @@ const pageRoutes: Array<RouteRecordRaw> = [
     },
   },
 ];
-const routes: Array<RouteRecordRaw> = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('@/views/home/home.vue'),
@@ -47,9 +47,10 @@ const router = createRouter({
  * @param title
  */
 function SetDocumentTitle(title: string) {
+  const mainStore = useMainStore();
   if (title) {
     document.title = title;
-    store.commit('SetDocumentTitle', title)
+    mainStore.SetDocumentTitle(title);
   }
 }
 

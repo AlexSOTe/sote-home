@@ -1,25 +1,24 @@
-const mainStore = {
+import { defineStore } from "pinia";
+
+export const useMainStore = defineStore('mainStore', {
   state: () => ({
     projectName: 'sote-home',
     documentTitle: '',
   }),
-  mutations: {
-    SetProjectName(state: IStoreStateType, projectName: string) {
-      state.projectName = projectName;
-    },
-    SetDocumentTitle(state: IStoreStateType, documentTitle: string) {
-      state.documentTitle = documentTitle;
-    },
-  },
-  actions: {
-  },
   getters: {
-    getProjectName(state: IStoreStateType) {
+    getProjectName(state) {
       return state.projectName;
     },
-    getDocumentTitle(state: IStoreStateType) {
+    getDocumentTitle(state) {
       return state.documentTitle;
     },
   },
-}
-export default mainStore;
+  actions: {
+    SetProjectName(projectName: string) {
+      this.projectName = projectName;
+    },
+    SetDocumentTitle(documentTitle: string) {
+      this.documentTitle = documentTitle;
+    },
+  }
+});

@@ -1,3 +1,4 @@
+import 'pinia';
 declare interface IQuestion {
   id: string;
   title: string;

@@ -3,7 +3,7 @@
   <div class="App">
     <div class="navBar">
       <van-sticky>
-        <van-nav-bar :title="store.getters.getDocumentTitle||'童话村香辣藤椒劲麻裹蛋大鸡排'" left-arrow>
+        <van-nav-bar :title="mainStore.documentTitle||'童话村香辣藤椒劲麻裹蛋大鸡排'" left-arrow>
           <template #left>
           </template>
           <template #right>
@@ -35,11 +35,13 @@
 <script setup lang="ts">
   import { useRoute, useRouter } from "vue-router";
   import { onMounted, reactive, ref, watch } from 'vue';
-  import { store } from './store/index';
   import Menu from './components/public/Menu.vue';
   import { Dialog, Notify, Toast } from "vant";
+  import { useMainStore } from "./store/main.store";
   const route = useRoute();
   const router = useRouter();
+
+  const mainStore = useMainStore();
 
   const tabbarIndex = ref(0);
 
