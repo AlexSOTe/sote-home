@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import path = require('path');
+import path from 'path';
 //按需加载
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
