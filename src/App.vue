@@ -4,7 +4,7 @@
     <canvas class="canvas" ref="canvas"></canvas>
     <div class="navBar">
       <van-sticky>
-        <van-nav-bar :title="mainStore.documentTitle||'童话村香辣藤椒劲麻裹蛋大鸡排'" left-arrow>
+        <van-nav-bar :title="mainStore.documentTitle||'个人学习笔记'" left-arrow>
           <template #left>
           </template>
           <template #right>

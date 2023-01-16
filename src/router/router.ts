@@ -26,7 +26,7 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('@/views/home/home.vue'),
     meta: {
-      title: '童话村香辣藤椒劲麻裹蛋大鸡排',
+      title: '首页',
     },
   },
   {
@@ -49,8 +49,8 @@ const router = createRouter({
 function SetDocumentTitle(title: string) {
   const mainStore = useMainStore();
   if (title) {
-    document.title = title;
-    mainStore.SetDocumentTitle(title);
+    document.title = `个人学习笔记 - ${title}`;
+    mainStore.SetDocumentTitle(document.title);
   }
 }
 
