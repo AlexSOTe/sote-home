@@ -1,17 +1,11 @@
 <template>
-  <div class="beian ob">
+  <span class="beian ob">
     <a href="https://beian.miit.gov.cn/">京ICP备2022007190号-1</a>
-  </div>
+  </span>
 </template>
 <style scoped lang="scss">
 .beian {
-  margin-bottom: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   white-space: nowrap;
   font-size: 12px;

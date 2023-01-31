@@ -1,14 +1,19 @@
 
 <template>
   <div class="home">
-    <img class="img" src="/static/img/icon_no_data.png" />
-    首页放点啥好？（捂脸
+    <p><img class="img" src="/static/img/icon_no_data.png" /></p>
+
+    <p>首页放点啥好？（捂脸</p>
+
+    <SiteInfo style="margin-top:40px;"/>
+
   </div>
 </template>
 
 <script setup lang="ts">
   import { onMounted, reactive, ref, computed } from 'vue';
   import { useRouter, useRoute } from 'vue-router';
+  import SiteInfo from '@/components/public/SiteInfo.vue';
 
 
   const router = useRouter();
@@ -18,9 +23,7 @@
 
 <style scoped lang="scss">
   .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 
     .img {
       border-radius: 10%;

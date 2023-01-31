@@ -1,7 +1,7 @@
 
 <template>
   <div class="paperCuts">
-    <div class="func">
+    <!-- <div class="func">
       <van-slider v-model="coln"
                   :min="1"
                   :max="stylesLength"
@@ -11,7 +11,7 @@
           <div class="sliderValueStyle">{{coln}}</div>
         </template>
       </van-slider>
-    </div>
+    </div> -->
     <div class="list">
       <div v-for="(x,i) in list"
            :key="x.id"

@@ -5,6 +5,8 @@
   --sote-theme-yellow: #E5DF9C;
   --sote-theme-green: #8DCA87;
   --sote-theme-blue: #609BD7;
+
+  --nav-size: 50px;
 }
 
 
@@ -45,4 +47,10 @@ button {
 
 .ob {
   backdrop-filter: blur(10px) saturate(10);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
