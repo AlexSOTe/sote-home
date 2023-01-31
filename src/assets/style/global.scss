@@ -1,17 +1,22 @@
-
 :root {
   --xhg-theme-color: #62db68;
   --van-button-primary-border-color: #62db68;
 }
 
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   user-select: none;
 }
 
-ul, ol, dl, dd, dt, li {
+ul,
+ol,
+dl,
+dd,
+dt,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -26,7 +31,7 @@ ul, ol, dl, dd, dt, li {
 button {
   border: none;
   background-color: transparent;
-  padding: 5px 10px;
+  padding: 0px;
   font-size: 14px;
 }
 

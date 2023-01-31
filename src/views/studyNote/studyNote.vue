@@ -38,10 +38,9 @@
 <script setup lang="ts">
   import { onMounted, reactive, ref, computed } from 'vue';
   import { useRouter, useRoute } from 'vue-router';
-  import { Toast } from 'vant';
   import { studyTabs } from '../../constants/staticData';
   import * as questions from '../../constants/question/index.question';
-  import { EStudyTabs } from '../../constants/enum';
+  import type { EStudyTabs } from '../../constants/enum';
   import { CopyText } from 'sote-tools';
   import QuestionCellItem from '../../components/public/QuestionCellItem.vue';
 
@@ -55,7 +54,7 @@
   const list = ref<Array<IQuestion>>([]);
 
   function onSearch() {
-    Toast('哦豁！这个功能还没做')
+    alert('哦豁！这个功能还没做')
   }
   function onClickTab(tab: IVantTabItemProps) {
     //展示对应数组

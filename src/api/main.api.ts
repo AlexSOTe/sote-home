@@ -1,7 +1,6 @@
-import { apiRequestModel, axios } from "../constants/http";
 import { BASE_API_URL } from "../constants/config";
 
-class Evaluate {
+class MainApi {
   //createPhoneRecycleOrder(params: any = {}) {
   //  return axios.post(
   //    `${BASE_API_URL}/customer/phoneRecycleOrder/createPhoneRecycleOrder`,
@@ -9,4 +8,4 @@ class Evaluate {
   //  );
   //}
 }
-export default new Evaluate();
+export const mainApi = new MainApi();

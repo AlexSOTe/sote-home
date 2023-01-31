@@ -13,7 +13,6 @@
 </template>
 <script setup lang="ts">
   import { CopyText } from "sote-tools";
-  import { Toast } from "vant";
 
 
   interface Props {
@@ -23,12 +22,12 @@
   const props = defineProps<Props>();
   function onTextCopy(text: string) {
     if (text.length < 1) {
-      Toast.fail('没东西你复制个P');
+      // Toast.fail('没东西你复制个P');
     } else {
       CopyText(text).then(() => {
-        Toast('复制成功');
+        // Toast('复制成功');
       }).catch(err => {
-        Toast.fail('复制失败，用的Clipboard的BOM接口，你的浏览器不支持，请自己想办法2333333');
+        // Toast.fail('复制失败，用的Clipboard的BOM接口，你的浏览器不支持，请自己想办法2333333');
       })
     }
   }

@@ -38,7 +38,6 @@
   import { onMounted, reactive, ref, watch } from 'vue';
   import Menu from './components/public/Menu.vue';
   import SiteInfo from './components/public/SiteInfo.vue';
-  import { Dialog, Notify, Toast } from "vant";
   import { useMainStore } from "./store/main.store";
   import { SubTrack } from "./modules/SubTrack";
   import { Track } from "./modules/Track";
@@ -125,7 +124,7 @@ void main() {
     cvs.width = window.innerWidth;
     cvs.height = window.innerHeight;
 
-    const gl = cvs.getContext("webgl")!;
+    const gl: any = cvs.getContext("webgl")!;
     //开启颜色合成
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);

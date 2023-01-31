@@ -1,5 +1,5 @@
-import { Toast } from "vant";
-import { createRouter, createWebHashHistory, createWebHistory, NavigationFailure, NavigationGuardNext, NavigationHookAfter, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory, } from "vue-router";
+import type { NavigationFailure, NavigationGuardNext, NavigationHookAfter, RouteLocationNormalized, RouteRecordRaw } from "vue-router";
 import { BASE } from "../constants/config";
 import { RouterChangeVibrate } from "../funny/vibrate";
 import { useMainStore } from "../store/main.store";
@@ -59,13 +59,13 @@ router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, n
   SetDocumentTitle(to.meta.title as string);
   RouterChangeVibrate();
   //跳转也面前显示loading
-  Toast.loading({ duration: 0 });
+  // Toast.loading({ duration: 0 });
   next();
 });
 router.afterEach((to: RouteLocationNormalized, from: RouteLocationNormalized, failure?: NavigationFailure | void) => {
   console.log('router.afterEach');
   //页面加载完，移除loading
-  Toast.clear();
+  // Toast.clear();
 });
 
 

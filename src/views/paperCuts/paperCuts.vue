@@ -24,7 +24,6 @@
 <script setup lang="ts">
   import { onMounted, reactive, ref, computed } from 'vue';
   import { useRouter, useRoute } from 'vue-router';
-  import { Toast } from 'vant';
 
 
   const router = useRouter();
