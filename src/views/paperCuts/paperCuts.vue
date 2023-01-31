@@ -83,7 +83,7 @@
       .sliderValueStyle {
         width: 20px;
         padding: 2px 5px;
-        background-color: var(--xhg-theme-color);
+        background-color: var(--sote-theme-green);
         border: 1px solid green;
         text-align: center;
         border-radius: 10px;
@@ -92,7 +92,7 @@
       .van-icon {
         padding: 10px;
         font-size: 22px;
-        color: var(--xhg-theme-color);
+        color: var(--sote-theme-green);
       }
     }
 

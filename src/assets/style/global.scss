@@ -1,6 +1,10 @@
 :root {
-  --xhg-theme-color: #62db68;
-  --van-button-primary-border-color: #62db68;
+  --sote-theme-purple: #9D59D8;
+  --sote-theme-pink: #D773A5;
+  --sote-theme-orange: #DBA26D;
+  --sote-theme-yellow: #E5DF9C;
+  --sote-theme-green: #8DCA87;
+  --sote-theme-blue: #609BD7;
 }
 
 
@@ -37,4 +41,8 @@ button {
 
 .indent2 {
   text-indent: 2em;
+}
+
+.ob {
+  backdrop-filter: blur(10px) saturate(10);
 }

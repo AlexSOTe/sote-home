@@ -1,9 +1,9 @@
 <template>
   <div ref="Menu" class="Menu">
-    <div class="menuBtn">
-      <button class="icon" @click="onMenuBtnClick">🌻</button>
+    <div class="menuIcon">
+      <button class="menuBtn" @click="onMenuBtnClick">🌻</button>
       <div v-if="showMenu"
-           class="menuList">
+           class="menuList ob">
         <div v-for="(x, i) in menuList"
              :key="i"
              class="menuItem">
@@ -48,7 +48,7 @@ onMounted(() => {
   //new Inertia(Menu.value!);
 });
 function onMenuBtnClick() {
-  showMenu.value = true;
+  showMenu.value = !showMenu.value;
 }
 function onMenuItemClick(item: IMenuItem) {
   showMenu.value = false;
@@ -56,6 +56,22 @@ function onMenuItemClick(item: IMenuItem) {
 }
 </script>
 <style scoped lang="scss">
+@keyframes ShowMenu {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+      right: 0;
+      bottom: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+      right: 35px;
+      bottom: 35px;
+  }
+}
+
 .Menu {
   --btn-size: 40px;
 
@@ -66,9 +82,9 @@ function onMenuItemClick(item: IMenuItem) {
   border-radius: 50%;
   width: var(--btn-size);
   height: var(--btn-size);
-  border: 1px solid lightgreen;
+  border: 1px solid var(--sote-theme-green);
 
-  .menuBtn {
+  .menuIcon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,12 +92,12 @@ function onMenuItemClick(item: IMenuItem) {
     height: var(--btn-size);
     padding: 0;
 
-    .icon {
+    .menuBtn {
       display: block;
       border-radius: 50%;
       width: var(--btn-size);
       height: var(--btn-size);
-      background-color: lightgreen;
+      background-color: var(--sote-theme-green);
       animation: FlourBreath 2s infinite;
       font-style: normal;
       font-size: 26px;
@@ -90,9 +106,10 @@ function onMenuItemClick(item: IMenuItem) {
     .menuList {
       padding: 10px;
       position: absolute;
-      right: 50px;
-      bottom: 0px;
-      animation: FadeIn 300ms;
+      animation: ShowMenu 300ms;
+      right: 35px;
+      bottom: 35px;
+      transform-origin: right bottom;
       overflow: hidden;
       width: 100px;
       border-radius: 10px;
