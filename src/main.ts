@@ -3,7 +3,7 @@ import { createPinia } from 'pinia';
 import App from '@/App.vue';
 import router from '@/router/router';
 import './assets/style/global.scss';
-import './assets/style/keyframes.css';
+import './assets/style/keyframes.scss';
 
 const app = createApp(App);
 
