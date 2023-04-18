@@ -4,10 +4,13 @@
     "vite.config.*",
     "vitest.config.*",
     "cypress.config.*",
-    "playwright.config.*"
+    "playwright.config.*",
+    "plugins/*"
   ],
   "compilerOptions": {
     "composite": true,
-    "types": [ "node" ]
+    "types": [
+      "node"
+    ]
   }
 }
