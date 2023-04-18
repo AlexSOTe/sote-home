@@ -23,8 +23,8 @@ import { Track } from "@/modules/Track";
 const canvas = ref<HTMLCanvasElement | null>(null);
 
 onMounted(() => {
-  const cvs = canvas.value!;
-  Init(cvs);
+  // const cvs = canvas.value!;
+  // Init(cvs);
 });
 
 

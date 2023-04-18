@@ -1,4 +1,4 @@
-export const VUE: Array<IQuestion> = [
+export const VUE: IQuestion[] = [
   {
     id: '0',
     title: `vue2项目报了【Uncaught SyntaxError: Unexpected token '<'】的错`,

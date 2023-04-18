@@ -1,4 +1,4 @@
-export const ElementUI: Array<IQuestion> = [
+export const ElementUI: IQuestion[] = [
   {
     id: '0',
     title: 'el-form的校验无法触发',

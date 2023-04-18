@@ -60,29 +60,30 @@ function onMenuItemClick(item: IMenuItem) {
   0% {
     opacity: 0;
     transform: scale(0);
-      right: 0;
-      bottom: 0;
+    right: 0;
+    bottom: 0;
   }
 
   100% {
     opacity: 1;
     transform: scale(1);
-      right: 35px;
-      bottom: 35px;
+    right: 35px;
+    bottom: 35px;
   }
 }
 
 .Menu {
   --btn-size: 40px;
+  --btn-border: 1px;
 
   position: fixed;
   right: 20px;
   bottom: 70px;
   z-index: 10;
   border-radius: 50%;
-  width: var(--btn-size);
-  height: var(--btn-size);
-  border: 1px solid var(--sote-theme-green);
+  width: calc(var(--btn-size) + var(--btn-border) * 2);
+  height: calc(var(--btn-size) + var(--btn-border) * 2);
+  border: var(--btn-border) solid var(--sote-theme-green);
 
   .menuIcon {
     display: flex;
@@ -113,11 +114,10 @@ function onMenuItemClick(item: IMenuItem) {
       overflow: hidden;
       width: 100px;
       border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(200, 200, 200, 0.3);
+      border: 1px solid green;
 
       .menuItem {
-        border-bottom: 1px solid #999;
-
         &:last-child {
           border: 0;
         }

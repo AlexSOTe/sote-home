@@ -1,4 +1,4 @@
-export const D3Question: Array<IQuestion> = [
+export const D3Question: IQuestion[] = [
   {
     id: `0`,
     title: ``,

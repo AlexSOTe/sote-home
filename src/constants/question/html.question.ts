@@ -1,4 +1,4 @@
-export const HTML: Array<IQuestion> = [
+export const HTML: IQuestion[] = [
   {
     id: '0',
     title: 'a标签（get）下载的excel打不开',

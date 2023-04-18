@@ -1,4 +1,4 @@
-export const Ubuntu: Array<IQuestion> = [
+export const Ubuntu: IQuestion[] = [
   {
     id: '0',
     title: 'ubuntu用Git提交代码每次都需要输入账号密码',

@@ -1,4 +1,4 @@
-export const Windows: Array<IQuestion> = [
+export const Windows: IQuestion[] = [
   {
     id: '0',
     title: '优化远程桌面的性能',

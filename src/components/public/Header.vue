@@ -26,6 +26,28 @@ function onAvatarClick() {
 }
 </script>
 <style scoped lang="scss">
+@keyframes TurningBorderHalo {
+  0% {
+    border-color: lightgreen;
+  }
+
+  70% {
+    border-color: lime;
+  }
+
+  80% {
+    border-color: green;
+  }
+
+  90% {
+    border-color: lime;
+  }
+
+  100% {
+    border-color: lightgreen;
+  }
+}
+
 .Header {
   position: sticky;
   top: 0;
@@ -72,7 +94,7 @@ function onAvatarClick() {
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          border: 1px solid lime;
+          border: 2px solid transparent;
           animation: TurningBorderHalo 2s infinite;
         }
       }

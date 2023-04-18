@@ -1,25 +1,3 @@
-@keyframes TurningBorderHalo {
-  0% {
-    border: 1px solid lightgreen;
-  }
-
-  70% {
-    border: 1px solid lime;
-  }
-
-  80% {
-    border: 1px solid green;
-  }
-
-  90% {
-    border: 1px solid lime;
-  }
-
-  100% {
-    border: 1px solid lightgreen;
-  }
-}
-
 @keyframes FlourBreath {
   10% {
     opacity: 1;

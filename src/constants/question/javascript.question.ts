@@ -1,4 +1,4 @@
-export const JavaScript: Array<IQuestion> = [
+export const JavaScript: IQuestion[] = [
   {
     id: '0',
     title: 'document.execCommand()复制页面东西失败',

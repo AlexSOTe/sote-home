@@ -1,4 +1,4 @@
-export const CSS: Array<IQuestion> = [
+export const CSS: IQuestion[] = [
   {
     id: '0',
     title: '假数据',
