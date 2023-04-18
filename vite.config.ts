@@ -11,7 +11,13 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    VitePWA(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      injectRegister: 'script',
+      devOptions: {
+        enabled: true,
+      }
+    }),
   ],
   resolve: {
     alias: {
