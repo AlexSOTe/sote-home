@@ -20,6 +20,13 @@ const pageRoutes: RouteRecordRaw[] = [
       title: '窗花',
     },
   },
+  {
+    path: '/scripts',
+    component: () => import('@/views/scripts/scripts.vue'),
+    meta: {
+      title: '脚本们',
+    },
+  },
 ];
 const routes: RouteRecordRaw[] = [
   {
