@@ -3,21 +3,23 @@ import type { NavigationFailure, NavigationGuardNext, NavigationHookAfter, Route
 import { BASE } from "../constants/config";
 import { RouterChangeVibrate } from "../funny/vibrate";
 import { useMainStore } from "../store/main.store";
+import home from '@/views/home/home.vue';
 
 
-const pageRoutes: RouteRecordRaw[] = [
+
+export const pageRoutes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: home,
+    meta: {
+      title: '首页',
+    },
+  },
   {
     path: '/studyNote',
     component: () => import('@/views/studyNote/studyNote.vue'),
     meta: {
       title: '技术点梳理',
-    },
-  },
-  {
-    path: '/paperCuts',
-    component: () => import('@/views/paperCuts/paperCuts.vue'),
-    meta: {
-      title: '窗花',
     },
   },
   {
@@ -27,15 +29,15 @@ const pageRoutes: RouteRecordRaw[] = [
       title: '脚本们',
     },
   },
-];
-const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    component: () => import('@/views/home/home.vue'),
+    path: '/paperCuts',
+    component: () => import('@/views/paperCuts/paperCuts.vue'),
     meta: {
-      title: '首页',
+      title: '窗花',
     },
   },
+];
+const routes: RouteRecordRaw[] = [
   {
     path: '/Home',
     redirect: '/',

@@ -16,6 +16,7 @@
 <script setup lang="ts">
   import { onMounted, ref } from "vue";
   import { useRoute, useRouter } from "vue-router";
+  import { pageRoutes } from "../../router/router";
 
   const route = useRoute();
   const router = useRouter();
@@ -29,11 +30,11 @@
   }
   const showMenu = ref(false);
 
-  const menuList = ref<IMenuItem[]>([
-    { text: '首页', path: '/home' },
-    { text: '技术问题', path: '/studyNote' },
-    { text: '窗花', path: '/paperCuts' },
-  ]);
+  const menuList = ref<IMenuItem[]>(pageRoutes.map(v => ({
+    text: v.meta?.title ?? '未设置页面名称',
+    path: v.path,
+  })) as IMenuItem[]);
+
   function onSelect(obj: any) {
     console.log(obj);
     showPopover.value = false;
