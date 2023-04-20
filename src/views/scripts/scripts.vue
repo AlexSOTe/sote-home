@@ -4,21 +4,16 @@
   </div>
 </template>
 <script setup lang="ts">
-  import DOMPurify from "dompurify";
-  import { marked } from "marked";
-  import { onMounted, ref } from "vue";
-  // import aaa from '@/constants/scripts/windows/09.安装nodejs版本管理器fnm.md';
+import { GetSafeHTMLStr } from "@/utils/tools";
+import { onMounted, ref } from "vue";
 
-  const str = ref('');
+const str = ref('');
 
-  onMounted(() => {
-    str.value = marked.parse('**haha **');
-    // const s = DOMPurify.sanitize(marked.parse('@/constants/scripts/windows/09.安装nodejs版本管理器fnm.md',));
-    // console.log(1111111, s);
-  });
+onMounted(() => {
+  str.value = GetSafeHTMLStr('**haha**');
+});
 
 </script>
 <style scoped lang="scss">
-  .scripts {
-  }
+.scripts {}
 </style>
